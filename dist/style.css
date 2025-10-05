@@ -1,0 +1,697 @@
+/*! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com*/
+body {
+  background-color: #e5e7eb !important;
+}
+
+/* .bg-slate-200 {
+  background-color: #E2E8F0 !important;
+} */
+
+.navbar {
+  background-color: #e2e8f0; /* Warna bg-slate-200 sebagai warna dasar */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease;
+  height: 80px; /* Tinggi navbar besar */
+  padding: 1rem 2rem;
+}
+
+/* Menambahkan jarak antar menu pada navbar */
+.navbar-nav .nav-item {
+  margin-right: 20px; /* Menambahkan jarak di antara item */
+}
+
+/* Menambahkan jarak antara teks pada navbar */
+.navbar-nav .nav-link {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Menambahkan efek bayangan saat navbar sticky */
+.navbar.position-sticky {
+  background-color: rgba(226, 232, 240, 0.8); /* Warna bg-slate-200 dengan transparansi */
+  backdrop-filter: blur(0px); /* Efek blur awal */
+}
+
+.navbar.position-sticky.top-0 {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  background-color: rgba(226, 232, 240, 0.8); /* Warna bg-slate-200 dengan transparansi */
+  backdrop-filter: blur(10px); /* Efek blur saat sticky */
+}
+
+/* Jika Anda ingin jarak lebih banyak di item menu terakhir */
+.navbar-nav .nav-item:last-child {
+  margin-right: 0; /* Menghilangkan margin kanan pada item terakhir */
+}
+
+.navbar-nav .nav-link {
+  color: #000 !important; /* Warna hitam */
+  transition: color 0.3s ease; /* Transisi halus untuk hover */
+}
+
+
+/* Mengubah warna teks menjadi pink saat hover */
+.nav-item .nav-link:hover {
+  color: pink !important;
+}
+
+/* Menetapkan z-index pada navbar agar selalu berada di atas video */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999; /* Memastikan navbar di atas konten lainnya */
+}
+
+/* Memberikan efek hover pada nav-link untuk warna pink */
+.nav-link.hover-pink:hover {
+  color: #f06292 !important; /* Warna pink pada hover */
+}
+
+.navbar-toggler {
+  background-color: #000; /* Warna hitam */
+  border: none; /* Hilangkan border default */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Memastikan tampilan navbar dan video tetap konsisten di layar kecil */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-toggler {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  #home .row > div {
+    margin-bottom: 2rem !important; /* Sama dengan mb-5 */
+  }
+}
+
+/* Mengatur kontainer video agar tetap responsif */
+.box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  overflow: hidden;
+  width: 100%; /* Ensure the box takes full width */
+}
+
+.box video {
+  left: 0;
+  top: 0;
+  margin-top: -14px;
+  width: 1600px;
+  height: 400px;
+  min-height: 70vh;
+  object-fit: cover;
+  z-index: 1;
+  aspect-ratio: 16 / 9; /* Set aspect ratio (16:9 is common for videos, adjust if needed) */
+}
+
+.rounded-custom {
+  border-radius: 15px; /* Atur ukuran sesuai kebutuhan Anda */
+}
+
+/* Mengatur agar gambar memenuhi kolom */
+.card-img-top {
+  width: 100%; /* Lebar gambar mengikuti lebar kolom */
+  height: 250px; /* Sesuaikan tinggi gambar agar seragam di semua kartu */
+  object-fit: cover; /* Memastikan gambar mengisi ruang tanpa merusak proporsi */
+}
+/* Mengubah warna teks pada card-text */
+.card-text {
+  color: #f06292 !important; /* Warna teks */
+}
+
+h2 {
+  color: #e25780; /* Warna teks */
+}
+
+.card-title {
+  font-weight: bold;
+}
+/* Mengubah warna tombol */
+.btn-primary {
+  background-color: #f06292 !important; /* Warna tombol utama */
+  border-color: #f06292 !important; /* Warna border tombol */
+  color: white !important; /* Warna teks */
+  border-radius: 8px !important;
+}
+
+.btn-primary:hover {
+  background-color: #d95780 !important; /* Warna tombol saat hover */
+  border-color: #d95780 !important; /* Warna border saat hover */
+}
+
+.custom-hover {
+  font-weight: bold; /* Membuat teks menjadi bold */
+  transition: color 0.3s ease; /* Menambahkan transisi pada perubahan warna */
+}
+
+.custom-hover:hover {
+  color: #d95780 !important; /* Mengubah warna teks menjadi pink saat hover */
+}
+
+.text-pink {
+  color: #d95780 !important;
+  font-weight: bold !important;
+}
+
+.btn-outline-dark {
+  border-radius: 50% !important; /* Menjadikan tombol bulat */
+}
+
+
+.btn-outline-dark:hover {
+  background-color: #d95780 !important;
+  border-color: #d95780 !important;
+  color: white !important; /* Opsional, jika ingin teks menjadi putih saat hover */
+}
+
+.bold-line {
+  border: 2px solid black; /* Ketebalan dan warna garis */
+  margin: 1.5rem 0; /* Jarak atas dan bawah */
+  border-radius: 2px; /* Opsional: Tambahkan radius untuk sudut halus */
+}
+
+/* Pengaturan Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* Styling untuk dark mode pada navbar */
+body.dark-mode .navbar {
+  background-color: #333;
+  color: white;
+}
+
+/* Styling untuk konten dark mode */
+body.dark-mode .nav-link {
+  color: #bbb;
+}
+
+body.dark-mode .nav-link:hover {
+  color: #f06292;
+}
+
+#to-top {
+  display: none; /* Tombol tersembunyi secara default */
+  width: 50px;
+  height: 50px;
+  background-color: #f06292; /* Warna pink */
+  color: white; /* Warna ikon */
+  font-size: 1.5rem; /* Ukuran ikon */
+  text-align: center;
+  line-height: 50px;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#to-top:hover {
+  background-color: #e91e63; /* Warna hover */
+}
+
+h2.mt-responsive {
+  font-size: 1.2rem; /* Ukuran font default */
+  font-weight: bold; /* Pastikan tetap tebal */
+  color: #000; /* Warna teks */
+  margin-bottom: 1rem; /* Jarak bawah */
+}
+
+@media (min-width: 640px) {
+  h2.mt-responsive {
+    font-size: 1.5rem; /* Ukuran font untuk layar kecil */
+  }
+}
+
+@media (min-width: 1280px) {
+  h2.mt-responsive {
+    font-size: 1.75rem; /* Ukuran font untuk layar besar */
+  }
+}
+
+
+footer {
+  color: #000;
+}
+
+footer a {
+  color: var(--bg);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #f06292;
+}
+
+footer .media li {
+  list-style: none;
+  display: inline;
+  margin: 0.5rem;
+}
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#home {
+  background-color: #f1f5f9; /* warna yang setara dengan bg-slate-100 di Tailwind CSS */
+}
+
+/* Mengatur ukuran video agar sama dengan gambar */
+.video-container video {
+  width: 100%; /* Membuat lebar video mengikuti lebar container */
+  height: auto; /* Menjaga aspek rasio */
+}
+
+/* Mengatur gambar agar responsif */
+.img-container img {
+  width: 100%; /* Membuat gambar responsif sesuai dengan ukuran container */
+  height: auto; /* Menjaga aspek rasio gambar */
+}
+
+
+.read-more-colom {
+  display: flex;
+  flex-direction: column;
+  color: #111;
+  gap: 1rem;
+}
+
+.colom {
+  padding: 30px;
+  border-radius: 2px;
+  line-height: 1.4rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+}
+
+.read-more-btn {
+  text-align: center; 
+  display: block;
+  margin-top: 20px;
+}
+
+.read-more-text {
+  display: none;
+}
+
+.read-more-text--show {
+  display: inline;
+}
+
+.card-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.img-display {
+  overflow: hidden;
+}
+
+.img-showcase {
+  display: flex;
+  transition: all 0.5s ease;
+}
+
+.img-showcase img {
+  min-width: 100%;
+}
+
+.img-select {
+  display: flex;
+}
+
+.img-item {
+  margin: 0.3rem;
+}
+
+.img-item:hover {
+  opacity: 0.8;
+}
+
+/* Style untuk harga */
+
+.rounded .font-weight-bold {
+  color: #f06292; /* Warna utama untuk teks */
+  font-size: 1.2rem; /* Ukuran font untuk harga */
+}
+
+.rounded .font-weight-bold del {
+  color: #d6336c; /* Warna lebih gelap untuk harga lama */
+  font-size: 1rem; /* Ukuran font untuk harga lama */
+}
+
+.rounded .font-weight-bold br + span {
+  color: #f06292; /* Warna utama untuk harga baru */
+  font-weight: bold; /* Menonjolkan harga baru */
+  font-size: 1.4rem; /* Ukuran font lebih besar */
+}
+
+/* Style untuk rating dan jumlah terjual */
+p {
+  color: #f06292; /* Warna utama untuk bintang dan teks */
+  font-size: 1rem; /* Ukuran font normal */
+  margin-top: 5px; /* Spasi atas */
+}
+
+
+/* Style untuk judul dan teks deskripsi */
+h5.text-dark {
+  color: #f06292 !important;
+}
+
+/* .bg-light {
+  background-color: #f8f9fa !important;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.text-dark {
+  color: #343a40;
+} */
+
+/* Gaya untuk paragraf deskripsi produk */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  
+}
+
+.sm\:text-xl {
+  font-size: 1.25rem;
+}
+
+.xl\:text-sm {
+  font-size: 1rem;
+}
+
+/* Penataan untuk elemen dengan class .read-more-text yang tersembunyi */
+.read-more-text {
+  display: none;
+}
+
+/* Menampilkan teks ketika tombol read-more diaktifkan */
+.read-more-text--show {
+  display: inline;
+}
+
+/* Styling untuk garis pemisah */
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 1rem 0;
+}
+
+/* Styling untuk link 'Deskripsi Lengkap' */
+.read-more-btn {
+  color: #f06292;
+  
+
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* Styling tambahan untuk elemen di dalam container */
+/* .bg-light p {
+  margin-bottom: 0.75rem;
+} */
+
+/* Tampilan responsif: Tambahkan padding di perangkat mobile */
+@media (max-width: 768px) {
+  .bg-light {
+    padding: 1rem 0.5rem;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+  }
+
+  .text-lg {
+    font-size: 1rem;
+  }
+}
+
+/* Styling untuk list item dalam paragraf */
+p span {
+  font-weight: 400;
+
+}
+
+/* Styling untuk teks disclaimer */
+p .disclaimer {
+  font-style: italic;
+
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.container, h2 {
+  font-family: 'Reem Kufi', sans-serif;
+}
+
+
+a.btn-link {
+  text-decoration: none; /* Hilangkan garis bawah pada link tombol tertentu */
+}
+
+/* Style untuk mengatur margin-top */
+.btn-link {
+  margin-top: -120px;
+  display: inline-block; /* Pastikan elemen a terlihat meski diberikan margin */
+}
+
+.mt-responsive {
+  margin-top: 20px;
+}
+
+@media (max-width: 567px) {
+  .mt-responsive {
+    margin-top: 0 !important;
+  }
+}
+
+/* SWIPER */
+.recipe-container h2 {
+  font-weight: 600;
+  text-align: center;
+  color: #e25780;;
+  margin: 20px 0 40px;
+}
+
+.swiper {
+  width: 80%;
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+.swiper-scrollbar {
+  --swiper-scrollbar-bottom: 0;
+  --swiper-scrollbar-drag-bg-color: #dda3b6;
+  --swiper-scrollbar-size: 5px;
+}
+
+.post {
+  max-width: 400px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-text);
+  background: rgba(236, 149, 200, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 16px 16px 0;
+  margin-bottom: 16px;
+}
+
+
+.post-img {
+  display: block;
+  margin: 0 auto; /* Mengatur margin horizontal otomatis untuk memusatkan gambar */
+  width: 100%;
+  max-width: 300px;
+  height: auto; /* Membiarkan tinggi mengikuti proporsi asli gambar */
+  object-fit: contain; /* Mengatur gambar agar sepenuhnya terlihat */
+  aspect-ratio: unset; /* Membatalkan pengaturan rasio aspek jika diperlukan */
+  border-radius: 6px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.post-body {
+  display: grid;
+  grid-template-columns: 15% 60% 20%;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 0;
+  cursor: default;
+}
+
+.post-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.post-author {
+  width: fit-content;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.6;
+  color: var(--clr-text);
+}
+
+.post-avatar {
+  width: 40px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post-actions {
+  position: relative;
+}
+
+.post-actions-content {
+  position: absolute;
+  bottom: 130%;
+  right: 0;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(172, 172, 172, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 2px 2px 10px 2px hsl(0, 0%, 0%, 0.25);
+  transition: opacity 0.25s, scale 0.25s;
+  transform-origin: bottom right;
+}
+
+.post-actions-content[data-visible="false"] {
+  pointer-events: none;
+  opacity: 0;
+  scale: 0;
+}
+
+.post-actions-content[data-visible="true"] {
+  pointer-events: unset;
+  scale: 1;
+  opacity: 1;
+}
+
+.post-actions-content li {
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.25rem;
+  list-style: none;
+}
+
+.post-actions-content li:is(:hover, :focus-within) {
+  background-color: rgba(248, 132, 169, 0.7);
+}
+
+.post-actions-link {
+  width: max-content;
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  align-items: center;
+  gap: 0.6rem;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.post-like {
+  text-decoration: none;
+  color: var(--clr-text);
+  margin-right: 5px;
+  font-size: 1.1rem;
+  opacity: 0.65;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.post-actions-controller {
+  border: 0;
+  background: none;
+  color: var(--clr-text);
+  cursor: pointer;
+  opacity: 0.65;
+}
+
+.post-like:hover,
+.post-actions-controller:hover {
+  opacity: 1;
+}
+
+.post-like:focus {
+  outline: none;
+}
+
+.post-like.active {
+  color: rgb(255, 0, 0);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px) { 
+  .swiper {
+      width: 80%;
+    }
+}
+
+@media (max-width: 900px) {
+  #recipes {
+    padding: 60px 80px;
+  }
+
+  .swiper {
+    width: 50%;
+  }
+}
+
+@media (max-width: 765px) {
+  .swiper {
+    width: 70%;
+  }
+}
+
+@media (max-width: 550px) {
+  #recipes {
+    padding: 40px 40px;
+  }
+
+  .swiper {
+    width: 80%;
+  }
+}
+
+/* AKHIS SWIPER */
