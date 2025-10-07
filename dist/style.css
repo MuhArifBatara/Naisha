@@ -10,7 +10,7 @@ body {
 .navbar {
   background-color: #e2e8f0; /* Warna bg-slate-200 sebagai warna dasar */
   transition: box-shadow 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease;
-  height: 80px; /* Tinggi navbar besar */
+ /*  height: 80px; Tinggi navbar besar */
   padding: 1rem 2rem;
 }
 
