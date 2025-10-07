@@ -904,7 +904,7 @@
   <!-- Tombol Back to Top -->
   <a href="#home"
     class="position-fixed bottom-0 end-0 d-flex align-items-center justify-content-center rounded-circle shadow"
-    style="margin: 20px;" id="to-top">
+    style="z-index:9999px; margin: 20px;" id="to-top">
     <i class="bi bi-arrow-up"></i>
   </a>
   <!-- Tambahkan Bootstrap CSS dan JS -->
@@ -962,7 +962,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;

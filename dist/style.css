@@ -695,3 +695,50 @@ a.btn-link {
 }
 
 /* AKHIS SWIPER */
+
+/* Pastikan body tidak menutupi elemen fixed */
+body {
+  position: relative;
+  z-index: 0;
+}
+
+/* Tombol WhatsApp */
+.btn-whatsapp .wa-icon {
+  position: fixed;
+  bottom: 100px; /* agar di atas tombol back to top */
+  right: 20px;
+  width: 55px;
+  border-radius: 60%;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  z-index: 9999; /* selalu di atas semua elemen */
+  transition: transform 0.2s ease;
+}
+
+.btn-whatsapp .wa-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Tombol Back to Top */
+#to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 22px;
+  line-height: 45px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  z-index: 9999; /* pastikan di atas gambar penilaian produk */
+  transition: all 0.3s ease;
+}
+
+#to-top:hover {
+  background-color: #ff85c1;
+  transform: scale(1.1);
+}
+
